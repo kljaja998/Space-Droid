@@ -194,71 +194,7 @@ scene("main_game", () => {
             ])
         })
     })
-/*
-    loop(1, () => {
-        let sign;
-        let orig1;
-        let orig2;
 
-        if (isGoingLeft) {
-            sign = -1;
-            orig1 = "center";
-            orig2 = "center";
-        } else {
-            sign = 1;
-            orig1 = "center"
-            orig2 = "center"
-        }
-
-        let slash = add([
-            "slash",
-            pos(player.pos.x + 25 * sign, player.pos.y),
-            rect(100, 50),
-            origin(orig1),
-            color(255, 255, 0),
-            opacity(1),
-            lifespan(1, {fade: 1}),
-            area()
-        ])
-
-        wait(1)
-
-        slash.onUpdate(() => {
-            slash.pos = player.pos
-            if(slash.opacity == 1){
-                play("slash", {volume: soundVolume})
-            }
-            if (slash.opacity > 0) {
-                //console.log("Hiii")
-                slash.opacity -= 0.035
-            }
-            else {
-                destroy(slash)
-
-                let slashRight = add([
-                    pos(player.pos.x - 25 * sign, player.pos.y),
-                    rect(100, 50),
-                    origin(orig2),
-                    color(255, 255, 0),
-                    opacity(1),
-                    area()
-                ])
-                slashRight.onUpdate(() => {
-                    if(slashRight.opacity == 1){
-                        play("slash", {volume: soundVolume})
-                    }
-                    slashRight.pos = player.pos
-                    if (slashRight.opacity > 0) {
-                        //console.log("Hiii")
-                        slashRight.opacity -= 0.035
-                    } else {
-                        destroy(slashRight)
-                    }
-                })
-            }
-        })
-    })
-*/
     onUpdate(() => {
 
     })
@@ -284,10 +220,6 @@ scene("main_game", () => {
             ])
         }
     }
-
-    /*onKeyPress("space", () => {
-        fadeOut(1);
-    })*/
 
     onKeyDown("w", () => {
         // Drze se dva dugmica - gore ide sqrt(2)/2 puta distance
@@ -528,12 +460,6 @@ scene("main_game", () => {
 
 scene ("main_menu", () => {
 
-    /*add([
-        text("🎯🎯🎯"),
-        pos(width() / 2, height() / 2),
-        color(255, 0, 0),
-    ])*/
-
     addButton("Start", vec2(width() / 2, height() / 2 - 50), "button" ,() => {
         go("main_game")
     })
@@ -599,10 +525,6 @@ scene("lose", (points) => {
     // go back to game with space is pressed
     onKeyPress("space", () => go("main_game"));
     onClick(() => go("main_game"));
-
-    /*addButton("Main menu", pos(width() / 2, height() / 2 + 90), "button", () => {
-        go("main_menu")
-    })*/
 
 });
 
