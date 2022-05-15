@@ -14,19 +14,15 @@ In this web game, you play as a droid restricted in a region of space with only 
    ```sh
    git clone https://github.com/krisstina642/Space-Droid.git
    ```
-2. You will now need the Kaboomjs package 
+2. Afterwards, install the required npm packages
    ```sh
-   $ npm install kaboom
+   $ npm install
    ```
-3. Afterwards, set up the required npm files
-   ```sh
-   npm install
-   ```
-4. In order to run the server, you will need the following command
+3. In order to run the server, you will need the following command
    ```sh
    npm run dev
    ```
-5. You can now access the web game using localhost and probably with a port of 8080 (but make sure to check your shell for more information)
+4. You can now access the web game using localhost and probably with a port of 8080 (but make sure to check your shell for more information)
   ```
   http://localhost:8080
   ```
